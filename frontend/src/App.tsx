@@ -4,6 +4,7 @@ import {ToastContainer} from "react-toastify";
 import Register from "./features/users/Register.tsx";
 import Login from "./features/users/Login.tsx";
 import AppToolbar from "./UI/AppToolbar/AppToolbar.tsx";
+import Chat from "./features/chat/Chat.tsx";
 
 
 const App = () => {
@@ -20,6 +21,8 @@ const App = () => {
                     <Routes>
                         <Route path="/register" element={<Register/>}/>
                         <Route path="/login" element={<Login/>}/>
+                        <Route path="/" element={<Chat/>}/>
+                        <Route path="/chat" element={<Chat/>}/>
                         <Route path="*" element={<Typography variant="h4">Not found page</Typography>}/>
                     </Routes>
                 </Container>
