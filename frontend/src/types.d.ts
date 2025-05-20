@@ -29,3 +29,22 @@ export interface LoginMutation {
 export interface GlobalError {
     error: string;
 }
+
+export interface ChatMessage {
+    username: string;
+    text: string;
+}
+
+export interface Member {
+    username: string;
+}
+
+export interface IncomingMessage {
+    type: string;
+    payload: {
+        messages: ChatMessage[];
+        users: {
+            username: string;
+        };
+    };
+}
